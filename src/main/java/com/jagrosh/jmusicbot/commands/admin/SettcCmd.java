@@ -32,9 +32,9 @@ public class SettcCmd extends AdminCommand
 {
     public SettcCmd(Bot bot)
     {
-        this.name = "settc";
-        this.help = "sets the text channel for music commands";
-        this.arguments = "<channel|NONE>";
+        this.name = "텍스트채널설정";
+        this.help = "음악 명령어들을 위한 텍스트 채널을 설정합니다";
+        this.arguments = "<채널이름|NONE>";
         this.aliases = bot.getConfig().getAliases(this.name);
     }
     

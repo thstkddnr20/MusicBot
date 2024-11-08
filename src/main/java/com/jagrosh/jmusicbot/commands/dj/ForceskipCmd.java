@@ -31,8 +31,8 @@ public class ForceskipCmd extends DJCommand
     public ForceskipCmd(Bot bot)
     {
         super(bot);
-        this.name = "forceskip";
-        this.help = "skips the current song";
+        this.name = "강제스킵";
+        this.help = "현재 음악을 강제 스킵합니다";
         this.aliases = bot.getConfig().getAliases(this.name);
         this.bePlaying = true;
     }

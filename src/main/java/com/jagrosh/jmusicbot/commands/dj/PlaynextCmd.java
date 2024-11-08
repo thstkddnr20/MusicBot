@@ -41,9 +41,9 @@ public class PlaynextCmd extends DJCommand
     {
         super(bot);
         this.loadingEmoji = bot.getConfig().getLoading();
-        this.name = "playnext";
-        this.arguments = "<title|URL>";
-        this.help = "plays a single song next";
+        this.name = "다음곡";
+        this.arguments = "<제목|주소>";
+        this.help = "다음 곡으로 재생시킵니다";
         this.aliases = bot.getConfig().getAliases(this.name);
         this.beListening = true;
         this.bePlaying = false;

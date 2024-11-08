@@ -29,8 +29,8 @@ public class PlaylistsCmd extends MusicCommand
     public PlaylistsCmd(Bot bot)
     {
         super(bot);
-        this.name = "playlists";
-        this.help = "shows the available playlists";
+        this.name = "플레이리스트";
+        this.help = "사용가능한 플레이리스트를 보여줍니다";
         this.aliases = bot.getConfig().getAliases(this.name);
         this.guildOnly = true;
         this.beListening = false;

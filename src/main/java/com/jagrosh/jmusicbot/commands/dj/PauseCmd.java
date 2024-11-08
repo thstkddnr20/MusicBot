@@ -29,8 +29,8 @@ public class PauseCmd extends DJCommand
     public PauseCmd(Bot bot)
     {
         super(bot);
-        this.name = "pause";
-        this.help = "pauses the current song";
+        this.name = "중지";
+        this.help = "현재 음악을 중지시킵니다";
         this.aliases = bot.getConfig().getAliases(this.name);
         this.bePlaying = true;
     }

@@ -37,8 +37,8 @@ public class SeekCmd extends MusicCommand
     public SeekCmd(Bot bot)
     {
         super(bot);
-        this.name = "seek";
-        this.help = "seeks the current song";
+        this.name = "이동";
+        this.help = "현재 곡의 원하는 위치로 이동합니다";
         this.arguments = "[+ | -] <HH:MM:SS | MM:SS | SS>|<0h0m0s | 0m0s | 0s>";
         this.aliases = bot.getConfig().getAliases(this.name);
         this.beListening = true;

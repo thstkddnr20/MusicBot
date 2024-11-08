@@ -44,9 +44,9 @@ public class QueueCmd extends MusicCommand
     public QueueCmd(Bot bot)
     {
         super(bot);
-        this.name = "queue";
-        this.help = "shows the current queue";
-        this.arguments = "[pagenum]";
+        this.name = "큐";
+        this.help = "현재 큐를 보여줍니다";
+        this.arguments = "[페이지 수]";
         this.aliases = bot.getConfig().getAliases(this.name);
         this.bePlaying = true;
         this.botPermissions = new Permission[]{Permission.MESSAGE_ADD_REACTION,Permission.MESSAGE_EMBED_LINKS};

@@ -31,8 +31,8 @@ public class QueueTypeCmd extends AdminCommand
     public QueueTypeCmd(Bot bot)
     {
         super();
-        this.name = "queuetype";
-        this.help = "changes the queue type";
+        this.name = "큐타입";
+        this.help = "큐 타입을 변경합니다";
         this.arguments = "[" + String.join("|", QueueType.getNames()) + "]";
         this.aliases = bot.getConfig().getAliases(this.name);
     }
@@ -47,7 +47,7 @@ public class QueueTypeCmd extends AdminCommand
         if (args.isEmpty())
         {
             QueueType currentType = settings.getQueueType();
-            event.reply(currentType.getEmoji() + " Current queue type is: `" + currentType.getUserFriendlyName() + "`.");
+            event.reply(currentType.getEmoji() + " 현재 큐타입입니다: `" + currentType.getUserFriendlyName() + "`.");
             return;
         }
 
@@ -57,7 +57,7 @@ public class QueueTypeCmd extends AdminCommand
         }
         catch (IllegalArgumentException e)
         {
-            event.replyError("Invalid queue type. Valid types are: [" + String.join("|", QueueType.getNames()) + "]");
+            event.replyError("잘못된 큐 타입입니다. 올바른 타입은: [" + String.join("|", QueueType.getNames()) + "]");
             return;
         }
 
@@ -70,6 +70,6 @@ public class QueueTypeCmd extends AdminCommand
                 handler.setQueueType(value);
         }
 
-        event.reply(value.getEmoji() + " Queue type was set to `" + value.getUserFriendlyName() + "`.");
+        event.reply(value.getEmoji() + " 큐 타입이 지정되었습니다: `" + value.getUserFriendlyName() + "`.");
     }
 }

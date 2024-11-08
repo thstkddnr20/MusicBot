@@ -28,8 +28,8 @@ public class SkipratioCmd extends AdminCommand
 {
     public SkipratioCmd(Bot bot)
     {
-        this.name = "setskip";
-        this.help = "sets a server-specific skip percentage";
+        this.name = "스킵설정";
+        this.help = "음악을 스킵하기 위한 퍼센트를 조절합니다 (스킵 투표 비율 조절)";
         this.arguments = "<0 - 100>";
         this.aliases = bot.getConfig().getAliases(this.name);
     }

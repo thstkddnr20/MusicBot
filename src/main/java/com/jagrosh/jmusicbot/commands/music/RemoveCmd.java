@@ -33,9 +33,9 @@ public class RemoveCmd extends MusicCommand
     public RemoveCmd(Bot bot)
     {
         super(bot);
-        this.name = "remove";
-        this.help = "removes a song from the queue";
-        this.arguments = "<position|ALL>";
+        this.name = "제거";
+        this.help = "큐의 음악을 제거합니다";
+        this.arguments = "<위치|ALL>";
         this.aliases = bot.getConfig().getAliases(this.name);
         this.beListening = true;
         this.bePlaying = true;

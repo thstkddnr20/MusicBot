@@ -38,8 +38,8 @@ public class ForceRemoveCmd extends DJCommand
     public ForceRemoveCmd(Bot bot)
     {
         super(bot);
-        this.name = "forceremove";
-        this.help = "removes all entries by a user from the queue";
+        this.name = "강제제거";
+        this.help = "특정 유저에 의해 추가된 모든 음악을 강제 삭제합니다";
         this.arguments = "<user>";
         this.aliases = bot.getConfig().getAliases(this.name);
         this.beListening = false;

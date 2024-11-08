@@ -32,9 +32,9 @@ public class SetvcCmd extends AdminCommand
 {
     public SetvcCmd(Bot bot)
     {
-        this.name = "setvc";
-        this.help = "sets the voice channel for playing music";
-        this.arguments = "<channel|NONE>";
+        this.name = "보이스채널설정";
+        this.help = "음악을 재생하기 위한 보이스 채널을 설정합니다";
+        this.arguments = "<채널이름|NONE>";
         this.aliases = bot.getConfig().getAliases(this.name);
     }
     
@@ -43,26 +43,26 @@ public class SetvcCmd extends AdminCommand
     {
         if(event.getArgs().isEmpty())
         {
-            event.reply(event.getClient().getError()+" Please include a voice channel or NONE");
+            event.reply(event.getClient().getError()+" 보이스 채널이름 또는 NONE을 입력해주세요");
             return;
         }
         Settings s = event.getClient().getSettingsFor(event.getGuild());
         if(event.getArgs().equalsIgnoreCase("none"))
         {
             s.setVoiceChannel(null);
-            event.reply(event.getClient().getSuccess()+" Music can now be played in any channel");
+            event.reply(event.getClient().getSuccess()+" 이제 어느 채널에서든 음악이 재생될 수 있습니다");
         }
         else
         {
             List<VoiceChannel> list = FinderUtil.findVoiceChannels(event.getArgs(), event.getGuild());
             if(list.isEmpty())
-                event.reply(event.getClient().getWarning()+" No Voice Channels found matching \""+event.getArgs()+"\"");
+                event.reply(event.getClient().getWarning()+" 일치하는 보이스 채널이 없습니다 \""+event.getArgs()+"\"");
             else if (list.size()>1)
                 event.reply(event.getClient().getWarning()+FormatUtil.listOfVChannels(list, event.getArgs()));
             else
             {
                 s.setVoiceChannel(list.get(0));
-                event.reply(event.getClient().getSuccess()+" Music can now only be played in "+list.get(0).getAsMention());
+                event.reply(event.getClient().getSuccess()+" 이제 음악은 해당 보이스 채널에서만 재생이 가능합니다 -> "+list.get(0).getAsMention());
             }
         }
     }

@@ -34,9 +34,9 @@ public class LyricsCmd extends MusicCommand
     public LyricsCmd(Bot bot)
     {
         super(bot);
-        this.name = "lyrics";
-        this.arguments = "[song name]";
-        this.help = "shows the lyrics of a song";
+        this.name = "가사";
+        this.arguments = "[노래 제목]";
+        this.help = "노래의 가사를 보여줍니다";
         this.aliases = bot.getConfig().getAliases(this.name);
         this.botPermissions = new Permission[]{Permission.MESSAGE_EMBED_LINKS};
     }
